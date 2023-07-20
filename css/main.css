@@ -20,7 +20,7 @@ body {
 }
 
 .hero {
-	padding: 80px;
+	padding: /*8*/0px;
     background-size:cover;
     /* border: medium 20% solid gray; */
     border: 40%; 
@@ -41,12 +41,13 @@ body {
 	display:inline-block;
     flex-direction:initial;  
 	max-width:contents;
-	margin:50px:auto;
+	margin:50px auto;
 } 
 
 .astro-men{
-	margin-top: 100px;
-	padding:150px;
+	
+	margin-top: 10/*0*/px;
+	padding:/*15*/0px;
 	height: 100px;
 	width:auto;
 	/* border: medium solid #333;  */
