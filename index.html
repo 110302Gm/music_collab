@@ -14,11 +14,10 @@
 	</header>
 	<section class="hero">
 		<div class="hero__content">
-		  <h2 hidden>Hero Images</h2>
-
-		  <img id="bg1" ondrop="drop(event)" 
-		  ondragover="allowDrop(event)" src="images/moon_background.png" alt="moon_background" width="900px" height="auto">
-		  
+			<!--<h2 >Hero Images</h2>-->
+			<div class="bgimg" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+		  <!--<img id="bg1" 
+		  src="images/moon_background.png" alt="moon_background" width="900px" height="auto" >-->
 		</div>
 	  </section>
 	  </div>
@@ -43,19 +42,20 @@
         var bleep = new audio();
         bleep.src = "bleep.mp3";
       </script>-->
-
+<!--
 	  <div class="empty">
-		<div class="fill" draggable="true"></div>
-		
+		<div class="fill" ></div>
+		-->
 	<section id="chracter-space">
 		<div class="astro-men">
-			<img id="drag1" src="images/space_man_mic.png"  draggable="true" ondragstart="drag(event)" alt="space man"  width="200px" height="auto">
-			<img id="drag2" src="images/space_man_keyboard.png " draggable="true" ondragstart="drag(event)"  alt="space keyboard" width="220px" height="auto">
-			<img id="drag3" src="images/space_man_sax.png" draggable="true" ondragstart="drag(event)" alt="space sax"  width="250px" height="auto">
-			<img id="drag4" src="images/space_man_dj.png" draggable="true" ondragstart="drag(event)" alt="space dj"width="220px" height="auto">
-			<img id="drag5" src="images/space_man_guitar.png" draggable="true" ondragstart="drag(event)" alt="space guitar "width="200px" height="auto">
+			<img id="drag1"  src="images/space_man_mic.png"  draggable="true" ondragstart="drag(event)" alt="space man"  width="200px" height="auto">
+			<img id="drag2"  src="images/space_man_keyboard.png " draggable="true" ondragstart="drag(event)"  alt="space keyboard" width="220px" height="auto">
+			<img id="drag3"  src="images/space_man_sax.png" draggable="true" ondragstart="drag(event)" alt="space sax"  width="240px" height="auto">
+			<img id="drag4"  src="images/space_man_dj.png" draggable="true" ondragstart="drag(event)" alt="space dj"width="220px" height="auto">
+			<img id="drag5"  src="images/space_man_guitar.png" draggable="true" ondragstart="drag(event)" alt="space guitar "width="200px" height="auto">
 		    </div>
 		</div>
+		<audio id="music1" src="" preload="auto"></audio>
 	</section>
 	<!-- <audio controls>
 		<source src="audio/acoustic-guitar-loop-f-91bpm-132687.mp3" type="audio/mp3" loop>
@@ -70,7 +70,11 @@
 
 
 	<script>
-		
+
+		function playAudio(url) {
+  		new Audio(url).play();
+}
+
         function allowDrop(ev) {
             ev.preventDefault();
         }
